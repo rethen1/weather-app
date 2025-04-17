@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Weather from 'src/components/Weather'
+import Weather from './components/Weather'
 
 const App = () => {
   return (
