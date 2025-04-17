@@ -1,0 +1,16 @@
+# Otros directives
+AddType text/jsx .jsx
+
+# Redirigir HTTP a HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Configuración de página de error 404
+ErrorDocument 404 /404.html
+
+# Proteger el acceso a archivos sensibles
+<FilesMatch "\.(htaccess|htpasswd|ini)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
